@@ -1,7 +1,7 @@
 # Hacktoberfest your Project submission
 This is a great way for learners to take part in Hacktoberfest</br>
 
-<p align="center"><img width="576" alt="Hfest-Logo-2-Color-Void@2x" src="https://user-images.githubusercontent.com/72184293/193453787-7815c591-e093-4d72-9522-39cf823f60df.png"></p>
+<p align="center"><img width="650"  src="https://codothon.com/wp-content/uploads/2022/10/Hacktoberfest-Time-to-Hack-Codothon.jpg"></p>
 
 <h3 align="center">
     <a href="https://hacktoberfest.com/">
