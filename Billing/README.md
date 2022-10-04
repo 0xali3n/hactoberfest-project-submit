@@ -1,13 +1,13 @@
-# VIT_Billing
+# Billing
 
 
 Create a local folder django
-C:\Users\prashant\django>py -3 -m venv .venv
+C:\Users\shrishail\django>py -3 -m venv .venv
 
-C:\Users\prashant\django>
-C:\Users\prashant\django>.venv\scripts\activate
+C:\Users\shrishail\django>
+C:\Users\shrishail\django>.venv\scripts\activate
 
-(.venv) C:\Users\prashant\django>code ..
+(.venv) C:\Users\shrishail\django>code ..
 
 Open the project folder in VS Code by running code ., or by running VS Code and using the File > Open Folder command.
 select the folder django 
@@ -26,14 +26,14 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 
 Try the new cross-platform PowerShell https://aka.ms/pscore6
 
-PS C:\Users\prashant\django> & c:/Users/prashant/django/.venv/Scripts/Activate.ps1
-(.venv) PS C:\Users\prashant\django> 
+PS C:\Users\shrishail\django> & c:/Users/shrishail/django/.venv/Scripts/Activate.ps1
+(.venv) PS C:\Users\shrishail\django> 
 
 
 
-PS C:\Users\prashant\django> & c:/Users/prashant/django/.venv/Scripts/Activate.ps1
-(.venv) PS C:\Users\prashant\django> python -m pip install --upgrade pip
-Requirement already satisfied: pip in c:\users\prashant\django\.venv\lib\site-packages (21.2.4)
+PS C:\Users\shrishail\django> & c:/Users/shrishail/django/.venv/Scripts/Activate.ps1
+(.venv) PS C:\Users\shrishail\django> python -m pip install --upgrade pip
+Requirement already satisfied: pip in c:\users\shrishail\django\.venv\lib\site-packages (21.2.4)
 Collecting pip
   Using cached pip-21.3.1-py3-none-any.whl (1.7 MB)
 Installing collected packages: pip
@@ -45,7 +45,7 @@ Successfully installed pip-21.3.1
 
 
 
-(.venv) PS C:\Users\prashant\django> python -m pip install django
+(.venv) PS C:\Users\shrishail\django> python -m pip install django
 Collecting django
   Using cached Django-4.0-py3-none-any.whl (8.0 MB)
 Collecting sqlparse>=0.2.2
