@@ -1,0 +1,278 @@
+# ****6.0 Subsystem Components****
+|Sl.No.|Subsystem Name|Components|Name|
+|------|--------------|----------|----|
+|1.|User-Interface Unit|IR Sensor|Tejas|
+|||Bluetooth Module||
+|||Push Buttons||
+|||Arduino Board||
+|||Jack||
+|2.|Shape Display Unit Part 1|Stepper Motor|Vighnesh|
+|||Outer disk||
+|||Rod to support stepper motor||
+|||Casing of Shape Displaying Unit||
+|3.|Shape Display Unit Part 2|DC Motor|Anushika|
+|||Inner Rod||
+|||Rod to support DC motor||
+|||Combined 2-Relay Module||
+|||Pointer||
+|||Colour Sensor||
+|4.|Indication Unit|Buzzer|Annapurna|
+|||LED||
+|||Bread Board||
+|||Casing of Indication and User Interface Unit||
+
+
+# ****6.1 3D Model****
+# ****6.1.1 Assembly 1 User Interface Unit****
+
+
+
+****TOP VIEW****
+
+
+
+
+![Screenshot 2022-07-01 111010](https://user-images.githubusercontent.com/105198072/176841131-15707db7-a88f-4c1c-94bc-3780d1bdce98.png)
+
+
+# ****6.1.2 Assembly 2 Shape Displaying Unit****
+
+
+
+
+Front view: 
+
+
+
+
+
+![Screenshot 2022-08-08 100259](https://user-images.githubusercontent.com/105198072/183339787-049528aa-a135-44b3-8c8b-3ca65fbe21e4.png)
+
+
+
+
+
+
+Side view:
+
+
+
+
+
+
+![Screenshot 2022-08-08 100207](https://user-images.githubusercontent.com/105198072/183339721-508bc46d-fd6f-44ff-94e6-0ee175b97dba.png)
+
+
+
+
+
+
+# ****6.1.3 Assembly 3 Indication Unit****
+![Screenshot 2022-06-29 205420](https://user-images.githubusercontent.com/105198072/176474859-43991221-5168-4eae-95b9-303c7cfc3978.png)
+
+
+
+
+
+
+# ****6.1.4 Final 3D Model****
+
+
+
+![image](https://user-images.githubusercontent.com/105198072/183339424-21ffdabb-afc6-4781-ad4e-e9b86d42b96b.png)
+
+
+
+
+
+# 6.2 Circuit Diagram 
+
+
+## 6.2.1. Subsystem 1-User Interface Unit
+
+![Bluetooth](https://user-images.githubusercontent.com/105157461/183826957-52c5b46a-176a-4900-92d8-e47528c621cd.png)
+
+## 6.2.2. Subsystem 2-Shape Display Unit
+![sd](https://user-images.githubusercontent.com/105157461/176464075-8395800a-5229-4a2d-a1cf-5f469c153fa5.png)
+
+
+
+
+## 6.2.3. Subsystem 3-Indication Unit
+![Screenshot 2022-08-08 001837](https://user-images.githubusercontent.com/105157461/183306591-0b7d12df-dadc-4076-85e1-9eda40b8de0b.png)
+
+## 6.2.4. Final Circuit Diagram
+![n](https://user-images.githubusercontent.com/105157461/183827431-f61ba759-866b-45b7-aefb-7cd2859d0995.png)
+
+
+
+
+
+
+# ****6.3.1 Algorithm 1 User-Interface Unit****
+
+* Step 01 - Start.
+* Step 02 - Activate the bluetooth module.
+* Step 03 - Provide the options to the user.
+            if the data pressed by the user is '1'- ON the DC Motor.
+            else if data pressed by the user is '0' - OFF the DC motor.
+            else if data passed by the user is '2' - Activate the stepper motor
+            else if data passed by the user is '3' - LED blink 
+* Step 04 - Send the signals to the shape displaying unit according to the data passed.
+* Step 05 - Stop.
+
+
+
+# ****6.3.2 Algorithm 2 Shape Displaying Unit****
+
+* Step 01 - Start.
+* Step 02 - if the data passed is '1' - ON the DC motor and start rotating the outer disk.
+
+
+            else if the data passed is '0' - OFF the DC motor and also sense the colour on which the shape lands. Store the value of colour in a 
+            variable.
+
+
+            else if data passed is '2' - Activate the stepper motor such that everytime the data passed is 2 , the pointer of the inner disk moves by a 
+            specified angle.   Also increment the count value by 1.
+           
+            else if data passed is '3' - Off the stepper motor and check the values of colour and count.
+
+
+* Step 03- if colour==count
+         Green LED blinks.
+
+
+         else 
+          Red LED blinks.
+
+
+* Step 04- Activate the stepper motor after a delay of 5 seconds and return the pointer of the inner disk back to its original position.
+
+
+
+* Step 05- Stop.
+
+
+# ****6.3.3 Algorithm 3 Indication Unit****
+* Step 01 - Start.
+* Step 02 - if the colour==count 
+            Blink green LED indicating it to the user that the answer is correct
+
+            else
+            Blink the Red LED indicating it to the user that the answer is wrong.
+
+* Step 04 - Stop.
+
+# ****6.3.34 Final Algorithm****
+* Step 01 - Start.
+* Step 02 - Activate the bluetooth module.
+* Step 03 - Provide the options to the user.
+            if the data pressed by the user is '1'- ON the DC Motor.
+            else if data pressed by the user is '0' - OFF the DC motor.
+            else if data passed by the user is '2' - Activate the stepper motor
+            else if data passed by the user is '3' - LED blink 
+* Step 04 - Send the signals to the shape displaying unit according to the data passed.
+            if the data passed is '1' - ON the DC motor and start rotating the outer disk.
+
+
+            else if the data passed is '0' - OFF the DC motor and also sense the colour on which the shape lands. Store the value of colour in a 
+            variable.
+
+
+            else if data passed is '2' - Activate the stepper motor such that everytime the data passed is 2 , the pointer of the inner disk moves by a 
+            specified angle.   Also increment the count value by 1.
+           
+            else if data passed is '3' - Off the stepper motor and check the values of colour and count.
+
+
+* Step 05- if colour==count
+         Green LED blinks.
+
+
+         else 
+          Red LED blinks.
+
+
+* Step 06- Activate the stepper motor after a delay of 5 seconds and return the pointer of the inner disk back to its original position.
+* Step 07- Stop.
+
+
+
+
+
+# 6.4 Bill Of Materials 
+
+<html>
+<body>
+<!--StartFragment-->
+
+# ****6.4.1 Subsystem 1 -User Interface Unit****
+
+S.no | Name of the parts |  Description | Quantity | Cost
+-- |  -- | -- | -- | --
+1 | DC Motor   |60 RPM| 1 | 130.00
+2 | Jack | -- | --- | 1 | 50
+3 | Jumper Wires Pack |M/M & M/F|1|65.00
+4 | Aluminium Channel|--|1|--
+5 | Bluetooth module|--|1|150
+6 | Acrylic Sheet|--|1|--
+7 |Nylon Rod|--|1|--
+8 |L-Clamps|--|4|--
+9 |Nuts & Bolts|--|4|--
+
+
+# ****6.4.2 Subsystem 2 -Shape Display Unit****
+
+S.no | Name of the parts |  Description | Quantity | Cost
+-- |  -- | -- | -- | --
+1 | Aluminium Channel|--|1|--
+2 | Arduino   |Mega 2560| 1 | 1566.00
+3 | Stepper Motor |-|1|75|
+4 | Acrylic Disc |--|1|--
+5 | Jumper Wires Pack |M/M & M/F|1|65.00
+6 | Arduino cable|--|--|51.00
+7 | Gears|--|--|--
+8 |Nuts & Bolts|--|20|--
+9 |Foam Sheet|--|1|--
+
+
+# ****6.4.3 Subsystem 3-Indication unit****
+
+S.no | Name of the parts |  Description | Quantity | Cost
+-- |  -- | -- | -- | --
+1 | Arduino | Mega 2560| 1 | 1566.00
+2 | LED's | Green and Red | 2 |10.00
+3 |Jumper Wires Pack |M/M & M/F|1|65.00
+4 |Color Sensor|TCS230|1|280.00
+5 |Foam Sheet|--|1|--
+6 |Breadboard|--|1|--
+7 |Hinges|--|8|--
+8 |Nuts & Bolts|--|32|--
+
+
+# ****6.4.4 Final Bill Of Materials****
+Sl.no | Name of the parts | Description | Quantity | Cost|
+-- | -- | -- | -- | -- 
+1 | Adaptor |5V| 1 |405|
+2 | Stepper Motor |-|1|75|
+3 | DC Motor | | 1 | 130.00
+4 | Relay module | ---| 1 |50| 
+5 | Arduino |  Mega 2560 | 1 | 1566.00
+6 | Jack| --| 3 | 
+7| LED's | -- | 2 |10|
+8| Jumper Wires Pack |M/M|1|65|
+9| Jumper Wires Pack |M/F|1|65|
+10|L Clamp|-|2|50|
+11|Aluminium Channel|-|1|125|
+12|Color Sensor|TCS230|1|175|
+13|Gears|--|--|110|
+14|Breadboard|--|1|--
+15|Hinges|--|8|--
+16|Nuts & Bolts|--|56|--
+
+
+<!--EndFragment-->
+</body>
+</html>
+
