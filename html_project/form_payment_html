@@ -9,25 +9,30 @@
 </head>
 <body>
     <form action="">
-        <h1>PAYMENT FORM</h1>
-        <h2>CONTACT INFORMATION</h2>
-        <p>Name: <input type="text>" name="name" required></p>
+        h1>payment form</h1>
+        <p>Required fileds are followed by *</p>
+        <h2>contact information</h2>
+        <p>Name: * <input type="text" name="name" required></p>
+        <fieldset>
+            <legend>Gender *</legend>
+        
         <p>
-            Male <input type="radio" name="Gender" id="male">
-            Female <input type="radio" name="Gender" id="Female">
+            Male <input type="radio" name="Gender" id="male" required>
+            Female <input type="radio" name="Gender" id="Female" required>
+        </p>
+        </fieldset>
+        <p>
+            Address:<textarea name="adderss" id="address" cols="100" rows="8"></textarea>
         </p>
         <p>
-            Address:<textarea name="adderss" id="address" cols="20" rows="5"></textarea>
+            Email: *<input type="email" name="Email" id="Email">
         </p>
         <p>
-            Email: <input type="email" name="Email" id="Email">
-        </p>
-        <p>
-            Pincode: <input type="number" name="pincode" id="pincode">
+            Pincode: *<input type="number" name="pincode" id="pincode">
         </p>
             <h2>Payment Details</h2>
-            <p>Card type:
-                <select name="Card_type" id="Card_type">
+            <p>Card type: *
+                <select name="Card_type" id="Card_type" required>
                     <option value="">--Select a card type--</option>
                     <option value="visa">visa</option>
                     <option value="master card">Master card</option>
@@ -35,13 +40,13 @@
                 </select> 
             </p>
             <p>
-                Card number: <input type="number" name="Card number" id="Card number">
+                Card number: <input type="number" name="Card number" id="Card number" required>
             </p>
             <p>
-                Expiry date:<input type="date" name="expiry_date" id="expiry_date">
+                Expiry date:*<input type="date" name="expiry_date" id="expiry_date" required>
             </p>
             <p>
-                CVV <input type="password" name="cvv" id="cvv"> 
+                CVV *<input type="password" name="cvv" id="cvv" required> 
             </p>
             <p>
                 <input type="Submit" value="Pay Now">
